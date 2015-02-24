@@ -155,6 +155,8 @@ function revelation.expose(args)
         awful.tag.viewonly(t[scr], t.screen)
     end
 
+    timer = require('gears.timer')
+    timer.delayed_call(function ()  -- BEGIN OF HACK
 
     local hintindex = {} -- Table of visible clients with the hint letter as the keys
     local clientlist = awful.client.visible()
@@ -312,6 +314,8 @@ function revelation.expose(args)
         --stole it from
         --https://github.com/Elv13/awesome-configs/blob/master/widgets/layout/desktopLayout.lua#L175
     end,"fleur")
+
+    end)  -- END OF HACK
 end
 
 -- Create the wiboxes, but don't show them
