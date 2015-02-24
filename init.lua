@@ -139,11 +139,11 @@ function revelation.expose(args)
         all_tags = awful.tag.gettags(scr)
 
         t[scr] = awful.tag.new({revelation.tag_name},
-        scr,
-        awful.layout.suit.fair)[1]
+            scr,
+            awful.layout.suit.fair)[1]
         zt[scr] = awful.tag.new({revelation.tag_name.."_zoom"},
-        scr,
-        awful.layout.suit.fair)[1]
+            scr,
+            awful.layout.suit.fair)[1]
 
 
         if curr_tag_only then
